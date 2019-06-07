@@ -1,4 +1,4 @@
-$bg: papayaWhip;
+$bg: white;
 $primary: steelBlue;
 
 html, body {height: 100%;}
@@ -7,10 +7,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  background: darken($primary, 20%);
+  background: darken($bg, 20%);
 }
 .btn {
+  margin: auto auto;
   width: 70px;
   height: 70px;
   background: $primary;
