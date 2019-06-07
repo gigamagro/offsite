@@ -20,7 +20,7 @@ $('.menu-icon').click(function() {
             borderRadius: ['50%', '0%'],
         }).add({
             width: '75%',
-            bottom: '10px',
+            height: '100%',
             easing: 'linear',
         }).add({
             targets: '.chat',
