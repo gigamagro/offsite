@@ -7,6 +7,7 @@ $("#bms_send_btn").click( function(){
     var url = "http://localhost:3000/getWords";
 
     var text = $("#bms_send_message").val();
+    $("#bms_send_message").val("");
 
     var JSONdata = {
         text: text   
@@ -17,12 +18,12 @@ $("#bms_send_btn").click( function(){
     m.appendTo('#bms_messages');
     //   alert(JSON.stringify(JSONdata));
 
-    m.find(".bms_message_text").text(text);
+    m.find(".bms_message_text").text(text);    
 
     // 表示
     //$("#c").toggle();
     $(".wrapper").toggle();
-
+//
     $.ajax({
         type : 'post',
         url : url,
@@ -56,5 +57,10 @@ $("#bms_send_btn").click( function(){
     });
 })
 
-
+// enterキーを押す
+function enter(){
+   if( window.event.keyCode == 13 ){
+      $("#bms_send_btn").click();
+   }
+}
 

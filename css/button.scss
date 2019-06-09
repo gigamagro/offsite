@@ -10,7 +10,8 @@ body {
   background: darken($bg, 20%);
 }
 .btn {
-  margin: auto auto;
+  margin: auto;
+  margin-top: 200px;
   width: 70px;
   height: 70px;
   background: $primary;
