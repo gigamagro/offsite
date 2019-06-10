@@ -6,8 +6,8 @@ $('.menu-icon').click(function() {
         $('.btn').css('animation', 'none');
         $('.btn:hover').css(
             {
-                'background': 'steelBlue',
-                'border': 'solid 3px #38678f'
+                'background': '#00a8a9',
+                'border': 'solid 3px #007576'
             }
         );
 
@@ -19,8 +19,9 @@ $('.menu-icon').click(function() {
             translateY: '-200px',
             borderRadius: ['50%', '0%'],
         }).add({
-            width: '75%',
-            height: '100%',
+            width: '40%',
+            height: '80%',
+            bottom: '-200px',
             easing: 'linear',
         }).add({
             targets: '.chat',
@@ -35,8 +36,8 @@ $('.menu-icon').click(function() {
         $('.btn').css('animation', 'pulsebtn 2s infinite');
         $('.btn:hover').css(
             {
-                'background': 'steelBlue',
-                'border': 'solid 3px #294d6b'
+                'background': '#00a8a9',
+                'border': 'solid 3px #007576'
             }
         )
 
@@ -50,6 +51,7 @@ $('.menu-icon').click(function() {
         }).add({
             width: '70px',
             height: '70px',
+            bottom: '20px'
         }).add({
             translateY: '0px',
             easing: 'linear',
