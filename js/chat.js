@@ -8,6 +8,15 @@ var ksas_message = '<div class="bms_message bms_left"><div class="bms_message_bo
 // loading中のメッセージ
 var loading_message = '<div class="bms_message bms_left loading_message"><div class="bms_message_box"><div class="bms_message_content"><div class="bms_message_text"><p class="loading"><span>解</span><span>析</span><span>中</span></p></div></div></div></div>';
 
+// スムーススクロール
+var moveTo = new MoveTo({
+    tolerance: 0,
+    duration: 1000,
+    easing: 'easeOutQuart',
+    container: $('#bms_messages')[0],
+});
+
+
 $("#bms_send_btn").click( function(){
     var url = "http://localhost:3000/getWords";
 
@@ -26,6 +35,8 @@ $("#bms_send_btn").click( function(){
     m.appendTo('#bms_messages');
     //   alert(JSON.stringify(JSONdata));
     m.find(".bms_message_text").text(text);    
+
+    moveTo.move($(".bms_message").last()[0]);
 
     // loading画面
     var loading = $(loading_message);
@@ -51,6 +62,8 @@ $("#bms_send_btn").click( function(){
             ksas_m.appendTo('#bms_messages');
             ksas_m.find(".bms_message_text").html(res.message);
             
+            moveTo.move($(".bms_message").last()[0]);
+
             // 送信ボタンを有効にする
             $('#bms_send_btn').prop("disabled", false);
         },
@@ -63,6 +76,8 @@ $("#bms_send_btn").click( function(){
             ksas_m.appendTo('#bms_messages');
             ksas_m.find(".bms_message_text").html('すみません、ご質問の答えが分かりません。</br>他の言い方でもう一度質問するか、</br>サービスデスクまでお問い合わせください。</br>KSASサービスデスク:0120-527-800');
  
+            moveTo.move($(".bms_message").last()[0]);
+
             // 送信ボタンを有効にする
             $('#bms_send_btn').prop("disabled", false);
         }
