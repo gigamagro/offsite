@@ -1,12 +1,3 @@
-html, body {
-  height: 100%; }
-
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: #cccccc; }
-
 .btn {
   position: absolute;
   right: 0px;

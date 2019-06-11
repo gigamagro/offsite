@@ -1,14 +1,6 @@
 $bg: white;
 $primary: #00a8a9;
 
-html, body {height: 100%;}
-
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: darken($bg, 20%);
-}
 .btn {
   position: absolute;
   right: 0px;
